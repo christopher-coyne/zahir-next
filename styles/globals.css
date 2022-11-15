@@ -42,13 +42,3 @@ h1 {
   background-color: #31383f;
   color: white;
 }
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: black;
-    background: white;
-  }
-}
