@@ -2,8 +2,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "lato";
 }
 
 a {
@@ -15,12 +14,41 @@ a {
   box-sizing: border-box;
 }
 
+body {
+  font-family: "poppins";
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  cursor: pointer;
+}
+
+/* headers */
+h1 {
+  font-size: 36px;
+  font-family: lato;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border: 1px solid #31383f;
+  cursor: pointer;
+}
+
+.btn--dark {
+  background-color: #31383f;
+  color: white;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
   body {
-    color: white;
-    background: black;
+    color: black;
+    background: white;
   }
 }
