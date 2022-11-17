@@ -6,7 +6,18 @@
   border: 2px solid blue;
 }
 
-.hero div {
+.heroTitle {
+  border: 1px solid blue;
+}
+
+.heroSubtitle {
+  font-size: 20px;
+  font-family: poppins;
+  font-weight: 400;
+  border: 1px solid red;
+}
+
+.imageContainer {
   text-align: center;
   border: 1px solid red;
 }
@@ -22,13 +33,7 @@
   padding: 0px 10%;
 }
 
-.h1-container {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-}
-
-.h1-container hr {
+.break {
   border: 0;
   clear: both;
   display: block;

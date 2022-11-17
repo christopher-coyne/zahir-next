@@ -30,15 +30,36 @@ a {
 h1 {
   font-size: 36px;
   font-family: lato;
+  margin: 0px;
 }
 
 .btn {
   padding: 0.5rem 1rem;
   border: 1px solid #31383f;
   cursor: pointer;
+  font-size: 16px;
+  font-family: lato;
+}
+
+.btn--icon {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: auto;
 }
 
 .btn--dark {
   background-color: #31383f;
   color: white;
+}
+
+.hover--light-blue:hover {
+  color: #abcdeb;
+  transition: color 0.5;
+}
+
+.titleContainer {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
 }
