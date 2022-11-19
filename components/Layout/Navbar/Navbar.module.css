@@ -1,6 +1,6 @@
 .navbar {
   background-color: #31383f;
-  padding: 0rem 5%;
+  padding: 1rem 5%;
   color: white;
   display: flex;
   justify-content: right;
@@ -13,8 +13,4 @@
 .navbar__list {
   display: flex;
   gap: 1.5rem;
-}
-
-.imageLink:hover {
-  color: black;
 }

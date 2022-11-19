@@ -1,3 +1,6 @@
+import { loadGetInitialProps } from "next/dist/shared/lib/utils";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
@@ -14,9 +17,9 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <section className={styles.content}>
+        <section id="content">
           <section className={styles.hero}>
-            <div className={styles.imageContainer}>
+            <div className={styles.logoContainer}>
               <Image
                 src="/logos/bull.png"
                 alt="zahir image"
@@ -24,24 +27,26 @@ export default function Home() {
                 width={300}
                 height={200}
               />
+            </div>
+            <div className={styles.titleContainer}>
               <h1 className={styles.heroTitle}>Zahir</h1>
               <h2 className={styles.heroSubtitle}>Art and Entertainment</h2>
-              <a href="#multimedia">
-                <button className="btn btn--dark btn--icon">
-                  <div>All Art</div>
-                  <Image
-                    src="/logos/down-triangle-light.svg"
-                    width={15}
-                    height={15}
-                    alt="V"
-                  />
-                </button>
-              </a>
             </div>
+            <a href="#multimedia">
+              <button className="btn btn--dark btn--icon">
+                <div>All Art</div>
+                <Image
+                  src="/logos/down-triangle-light.svg"
+                  width={15}
+                  height={15}
+                  alt="V"
+                />
+              </button>
+            </a>
           </section>
           <section className={styles.body}>
             <section id="#multimedia">
-              <div className={styles.titleContainer}>
+              <div className="titleContainer">
                 <h1>Multimedia and Games</h1>
                 <hr className={styles.break} />
               </div>
@@ -51,23 +56,31 @@ export default function Home() {
                     src="/logos/bull.png"
                     alt="bull"
                     className={styles.project__img}
-                    width={300}
-                    height={200}
+                    width={600}
+                    height={300}
                   />
-                  <article>
-                    <h2>Bull in the garden</h2>
-                    <p>Point and click adventure game</p>
-                    <Link href="/games/bull-in-the-garden">
-                      <button className="btn btn--dark btn--icon">
-                        Play{" "}
-                        <Image
-                          src="/logos/right-triangle-light.svg"
-                          width={15}
-                          height={15}
-                          alt="V"
-                        />
-                      </button>
-                    </Link>
+                  <article className={styles.project__description}>
+                    <h2 className={styles.project__title}>
+                      Bull in the garden
+                    </h2>
+                    <p className="body">Point and click adventure game</p>
+                    <div className={styles.buttonContainer}>
+                      <Link href="/games/bull-in-the-garden">
+                        <button className="btn btn--dark btn--icon">
+                          Play{" "}
+                        </button>
+                      </Link>
+                      <Link href="/games/bull-in-the-garden">
+                        <button className="btn btn--light btn--icon">
+                          Code{" "}
+                          <FontAwesomeIcon
+                            icon={faGithub}
+                            size="lg"
+                            color="black"
+                          />
+                        </button>
+                      </Link>
+                    </div>
                   </article>
                 </li>
               </ul>
@@ -77,7 +90,19 @@ export default function Home() {
                 <h1>Traditional Art</h1>
                 <hr className={styles.break} />
               </div>
-              <h2>Follow Me on Instagram</h2>
+              <div className={styles.traditionalArt}>
+                <p className={styles.followText}>
+                  Follow Me on{" "}
+                  <span className={`link `}>
+                    <FontAwesomeIcon
+                      icon={faInstagram}
+                      size="lg"
+                      className="link"
+                    />{" "}
+                    Instagram
+                  </span>
+                </p>
+              </div>
             </section>
           </section>
         </section>

@@ -3,30 +3,32 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   border: 2px solid blue;
+  text-align: center;
 }
 
 .heroTitle {
-  border: 1px solid blue;
+  margin-top: 10px;
 }
 
 .heroSubtitle {
   font-size: 20px;
   font-family: poppins;
   font-weight: 400;
-  border: 1px solid red;
+  margin-bottom: 40px;
 }
 
 .imageContainer {
   text-align: center;
-  border: 1px solid red;
+  border: 1px solid green;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
-.logo {
-  display: block;
-  margin: auto;
-  width: 30%;
-  margin-left: 37%;
+.logoContainer {
+  padding-left: 30px;
 }
 
 .body {
@@ -47,7 +49,34 @@
 }
 
 .project__img {
-  width: 500px;
-  height: 250px;
-  border: 3px solid red;
+  border: 1px solid red;
+}
+
+.project__description {
+  flex-grow: 1;
+  flex-shrink: 1;
+  border: 1px solid blue;
+  text-align: center;
+}
+
+.project__title {
+  font-family: lato;
+  margin-top: 30px;
+}
+
+.buttonContainer {
+  margin-top: 40px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.traditionalArt {
+  text-align: center;
+}
+
+.followText {
+  font-size: 28px;
+  font-family: lato;
+  font-weight: 600;
 }

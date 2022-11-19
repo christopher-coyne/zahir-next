@@ -5,6 +5,12 @@ body {
   font-family: "lato";
 }
 
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -33,6 +39,17 @@ h1 {
   margin: 0px;
 }
 
+h2 {
+  font-size: 28px;
+  font-weight: 600;
+  font-family: lato;
+}
+
+.body {
+  font-size: 18px;
+  font-family: poppins;
+}
+
 .btn {
   padding: 0.5rem 1rem;
   border: 1px solid #31383f;
@@ -53,13 +70,23 @@ h1 {
   color: white;
 }
 
+.btn--light {
+  background-color: white;
+  border: 1px solid #31383f;
+}
+
 .hover--light-blue:hover {
   color: #abcdeb;
   transition: color 0.5;
+}
+
+.link {
+  color: #0070d8;
 }
 
 .titleContainer {
   display: flex;
   gap: 1rem;
   align-items: center;
+  margin-bottom: 20px;
 }

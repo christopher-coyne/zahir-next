@@ -8,12 +8,14 @@ export function Navbar() {
     <nav className={styles.navbar}>
       <ul className={styles.navbar__list}>
         <li>
-          <FontAwesomeIcon
-            icon={faGithub}
-            size="lg"
-            color="white"
-            className="hover--light-blue"
-          />
+          <a href="www.google.com">
+            <FontAwesomeIcon
+              icon={faGithub}
+              size="lg"
+              color="white"
+              className="hover--light-blue"
+            />
+          </a>
         </li>
         <li>
           <a href="www.google.com">
@@ -26,7 +28,9 @@ export function Navbar() {
           </a>
         </li>
         <li>
-          <a>Contact</a>
+          <a href="www.google.com" className="hover--light-blue">
+            Contact
+          </a>
         </li>
       </ul>
     </nav>
