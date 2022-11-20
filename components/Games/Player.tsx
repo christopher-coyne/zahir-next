@@ -3,21 +3,36 @@ import Image from "next/image";
 import { useContext } from "react";
 import styles from "./Game.module.css";
 import { Item } from "interfaces/Item";
-import { Props } from "./constants";
+import { PlayerProps } from "./constants";
 
 export const PlayerContext = React.createContext({
-  currentRoom: "",
-  setCurrentRoom: {} as Dispatch<React.SetStateAction<string>>,
   inventory: [] as Item[],
   setInventory: {} as Dispatch<React.SetStateAction<Item[]>>,
+  roomHistory: [] as string[],
+  setRoomHistory: {} as Dispatch<React.SetStateAction<string[]>>,
+  currentRoom: "",
+  setCurrentRoom: {} as any,
 });
 
-export function Player({ children }: Props) {
-  const [currentRoom, setCurrentRoom] = useState<string>("");
+export function Player({ children }: PlayerProps) {
+  const [roomHistory, setRoomHistory] = useState<string[]>([""]);
   const [inventory, setInventory] = useState<Item[]>([]);
+
+  const currentRoom = roomHistory[roomHistory.length - 1];
+
+  const setCurrentRoom = (roomName: string) => {
+    setRoomHistory((prev: string[]) => [...prev, roomName]);
+  };
   return (
     <PlayerContext.Provider
-      value={{ currentRoom, setCurrentRoom, inventory, setInventory }}
+      value={{
+        inventory,
+        setInventory,
+        roomHistory,
+        setRoomHistory,
+        currentRoom,
+        setCurrentRoom,
+      }}
     >
       {children}
     </PlayerContext.Provider>
