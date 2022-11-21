@@ -4,9 +4,9 @@ import { roomsInfo } from "../roomsInfo";
 import { RoomsContext } from "components/Games/Rooms";
 import { Room } from "interfaces/Room";
 export function GardenRoom() {
-  const { inventory, roomHistory, currentRoom, setCurrentRoom } =
+  const { inventory, setInventory, roomHistory, currentRoom, setCurrentRoom } =
     useContext(PlayerContext);
-  const { rooms } = useContext(RoomsContext);
+  const { rooms, removeItem } = useContext(RoomsContext);
   console.log("current Room ", currentRoom);
 
   console.log("roomHistory ", roomHistory);
@@ -21,6 +21,12 @@ export function GardenRoom() {
 
   const room = roomsInfo[currentRoom];
 
+  const takeRose = () => {
+    const newRose = { name: "rose", history: [] };
+    setInventory((prev) => [...prev, newRose]);
+    removeItem(currentRoom);
+  };
+
   console.log("room info : ", room);
   return (
     <div>
@@ -31,7 +37,9 @@ export function GardenRoom() {
         </button>
       ))}
       <h3>Items:</h3>
-      {!!currentRoomInfo.items.length && <h4>rose</h4>}
+      {!!currentRoomInfo.items.length && (
+        <button onClick={() => takeRose()}>rose</button>
+      )}
     </div>
   );
 }
