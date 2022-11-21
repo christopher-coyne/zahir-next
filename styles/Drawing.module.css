@@ -1,0 +1,26 @@
+.container {
+  padding-top: 50px;
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+
+.artContainer {
+  display: flex;
+  gap: 2%;
+}
+
+.imgContainer {
+  position: relative;
+  flex-basis: 50%;
+  height: 25vw;
+}
+
+.blurb {
+  border: 1px solid blue;
+  flex-basis: 50%;
+}
+
+.link {
+  font-size: 28px;
+  font-family: lato;
+}

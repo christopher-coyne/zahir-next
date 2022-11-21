@@ -5,7 +5,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { Navbar } from "../components/Layout/Navbar";
-import styles from "../styles/Home.module.css";
+import styles from "/styles/Home.module.css";
 import { TraditionalArt } from "components/Home/TraditionalArt/TraditionalArt";
 
 export default function Home() {
