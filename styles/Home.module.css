@@ -79,4 +79,13 @@
   font-size: 28px;
   font-family: lato;
   font-weight: 600;
+  padding: 20px 0px 40px 0px;
+}
+
+.link {
+  margin: 0px 25px;
+}
+
+.traditional__logo {
+  margin-right: 5px;
 }

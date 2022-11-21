@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Navbar } from "../components/Layout/Navbar";
 import styles from "../styles/Home.module.css";
+import { TraditionalArt } from "components/Home/TraditionalArt/TraditionalArt";
 
 export default function Home() {
   return (
@@ -93,15 +94,21 @@ export default function Home() {
               <div className={styles.traditionalArt}>
                 <p className={styles.followText}>
                   Follow Me on{" "}
-                  <span className={`link `}>
+                  <a
+                    href="https://www.instagram.com/zahir_red/"
+                    className={`link  ${styles.link}`}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <FontAwesomeIcon
                       icon={faInstagram}
                       size="lg"
-                      className="link"
+                      className={styles.traditional__logo}
                     />{" "}
                     Instagram
-                  </span>
+                  </a>
                 </p>
+                <TraditionalArt />
               </div>
             </section>
           </section>
