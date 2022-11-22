@@ -1,3 +1,10 @@
+.main {
+  width: 90%;
+  max-width: 900px;
+  border: 4px solid red;
+  margin: auto;
+}
+
 .hero {
   height: 95vh;
   display: flex;
@@ -29,10 +36,6 @@
 
 .logoContainer {
   padding-left: 30px;
-}
-
-.body {
-  padding: 0px 10%;
 }
 
 .break {

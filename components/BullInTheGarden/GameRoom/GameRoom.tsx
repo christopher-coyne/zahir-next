@@ -4,7 +4,8 @@ import { GardenRoom } from "./Rooms/GardenRoom/GardenRoom";
 import { Start } from "./Rooms/Start/Start";
 import { RoomsContext } from "components/Games/Rooms";
 import { isEnd } from "./helpers";
-import { End } from "./Rooms/End/End";
+import { Loss } from "./Rooms/Loss/Loss";
+import { Win } from "./Rooms/Win/Win";
 export function GameRoom() {
   const { inventory, roomHistory, currentRoom, setCurrentRoom } =
     useContext(PlayerContext);
@@ -16,8 +17,11 @@ export function GameRoom() {
   // 0: no end, 1: loss, 2: win
   const hasLost = isEnd(roomHistory);
 
+  if (inventory.length === 3) {
+    return <Win />;
+  }
   if (hasLost) {
-    return <End />;
+    return <Loss />;
   }
   if (currentRoom === "") {
     return <Start />;

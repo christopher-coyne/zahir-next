@@ -45,7 +45,7 @@ export default function Home() {
               </button>
             </a>
           </section>
-          <section className={styles.body}>
+          <section>
             <section id="#multimedia">
               <div className="titleContainer">
                 <h1>Multimedia and Games</h1>
@@ -64,7 +64,7 @@ export default function Home() {
                     <h2 className={styles.project__title}>
                       Bull in the garden
                     </h2>
-                    <p className="body">Point and click adventure game</p>
+                    <p>Point and click adventure game</p>
                     <div className={styles.buttonContainer}>
                       <Link href="/games/bull-in-the-garden">
                         <button className="btn btn--dark btn--icon">
