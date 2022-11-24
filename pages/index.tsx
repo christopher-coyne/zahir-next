@@ -7,6 +7,8 @@ import Link from "next/link";
 import { Navbar } from "../components/Layout/Navbar";
 import styles from "/styles/Home.module.css";
 import { TraditionalArt } from "components/Home/TraditionalArt/TraditionalArt";
+import { MultiMedia } from "components/Home/MutliMedia/MultiMedia";
+import { Title } from "components/Layout/Title/Title";
 
 export default function Home() {
   return (
@@ -47,50 +49,13 @@ export default function Home() {
           </section>
           <section>
             <section id="#multimedia">
-              <div className="titleContainer">
-                <h1>Multimedia and Games</h1>
-                <hr className={styles.break} />
-              </div>
+              <Title text="Multimedia and Games" />
               <ul>
-                <li className={styles.project}>
-                  <Image
-                    src="/logos/bull.png"
-                    alt="bull"
-                    className={styles.project__img}
-                    width={600}
-                    height={300}
-                  />
-                  <article className={styles.project__description}>
-                    <h2 className={styles.project__title}>
-                      Bull in the garden
-                    </h2>
-                    <p>Point and click adventure game</p>
-                    <div className={styles.buttonContainer}>
-                      <Link href="/games/bull-in-the-garden">
-                        <button className="btn btn--dark btn--icon">
-                          Play{" "}
-                        </button>
-                      </Link>
-                      <Link href="/games/bull-in-the-garden">
-                        <button className="btn btn--light btn--icon">
-                          Code{" "}
-                          <FontAwesomeIcon
-                            icon={faGithub}
-                            size="lg"
-                            color="black"
-                          />
-                        </button>
-                      </Link>
-                    </div>
-                  </article>
-                </li>
+                <MultiMedia />
               </ul>
             </section>
             <section className={styles.traditionalArt}>
-              <div className="titleContainer">
-                <h1>Traditional Art</h1>
-                <hr className={styles.break} />
-              </div>
+              <Title text="Traditional Art" />
               <div className={styles.traditionalArt}>
                 <p className={styles.followText}>
                   Follow Me on{" "}

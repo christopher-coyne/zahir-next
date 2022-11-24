@@ -83,11 +83,3 @@ h2 {
 .link {
   color: #0070d8;
 }
-
-.titleContainer {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  padding-bottom: 20px;
-  border: 1px solid red;
-}

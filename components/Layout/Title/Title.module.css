@@ -1,0 +1,16 @@
+.break {
+  border: 0;
+  clear: both;
+  display: block;
+  background-color: black;
+  height: 4px;
+  flex-grow: 1;
+}
+
+.container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding-bottom: 20px;
+  border: 1px solid red;
+}
