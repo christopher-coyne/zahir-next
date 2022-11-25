@@ -13,8 +13,10 @@ const drawing = () => {
           <Image alt="drawing" fill src="/thumbnails/Falling Through.png" />
         </div>
         <article className={styles.blurb}>
-          <h2>Prospero</h2>
-          <hr />
+          <div>
+            <h2>Prospero</h2>
+            <hr className={styles.break} />
+          </div>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
             augue purus, feugiat a nunc sit amet, porta mattis urna. In hac

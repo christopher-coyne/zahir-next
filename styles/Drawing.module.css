@@ -11,16 +11,27 @@
 
 .imgContainer {
   position: relative;
-  flex-basis: 50%;
+  flex-basis: 60%;
   height: 25vw;
 }
 
 .blurb {
   border: 1px solid blue;
   flex-basis: 50%;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
 }
 
 .link {
   font-size: 28px;
   font-family: lato;
+}
+
+.break {
+  border: 0;
+  clear: both;
+  display: block;
+  background-color: black;
+  height: 3px;
 }

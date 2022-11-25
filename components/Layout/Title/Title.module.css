@@ -14,3 +14,16 @@
   padding-bottom: 20px;
   border: 1px solid red;
 }
+
+@media screen and (max-width: 1000px) {
+  .container {
+    flex-direction: column;
+    text-align: left;
+    align-items: flex-start;
+    gap: 0px;
+  }
+
+  .break {
+    width: 100%;
+  }
+}

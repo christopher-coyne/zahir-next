@@ -83,3 +83,7 @@ h2 {
 .link {
   color: #0070d8;
 }
+
+.link:hover {
+  color: #2d8be2;
+}
