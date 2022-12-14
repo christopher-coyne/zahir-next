@@ -3,6 +3,8 @@ import { PlayerContext } from "components/Games/Player";
 import { roomsInfo } from "../roomsInfo";
 import { RoomsContext } from "components/Games/Rooms";
 import { Room } from "interfaces/Room";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import styles from "./GardenRoom.module.css";
 export function GardenRoom() {
   const { inventory, setInventory, roomHistory, currentRoom, setCurrentRoom } =
@@ -12,9 +14,9 @@ export function GardenRoom() {
 
   console.log("roomHistory ", roomHistory);
 
-  const currentRoomInfo = rooms.filter(
-    (room: Room) => room.name === currentRoom
-  )[0];
+  const currentRoomInfo = rooms.find((room: Room) => room.name === currentRoom);
+
+  console.log("currentRoomInfo ", currentRoomInfo);
 
   const changeRoom = (roomName: string) => {
     setCurrentRoom(roomName);
@@ -29,20 +31,35 @@ export function GardenRoom() {
   };
 
   console.log("room info : ", room);
+
+  const backgroundImage = `url(\"/bull-in-the-garden/rooms/node-${
+    currentRoomInfo!.name
+  }.png\")`;
+  console.log("new background igm ", backgroundImage);
   return (
-    <div className={styles.Container}>
+    <div
+      className={styles.Container}
+      style={{ backgroundImage: backgroundImage, backgroundSize: "cover" }}
+    >
       <h3>Go To Rooms:</h3>
       {room.adjacent.map((adjacent) => (
         <button
           key={adjacent.name}
           onClick={() => changeRoom(adjacent.name)}
           className={styles.changeRoomButton}
+          title={`node ${adjacent.name}`}
+          style={{ top: `${adjacent.x}%`, left: `${adjacent.y}%` }}
         >
-          Go To {adjacent.name}
+          <FontAwesomeIcon
+            icon={faArrowUp}
+            size="lg"
+            color="white"
+            style={{ transform: `rotate(${adjacent.direction}deg)` }}
+          />
         </button>
       ))}
       <h3>Items:</h3>
-      {!!currentRoomInfo.items.length && (
+      {!!currentRoomInfo!.items.length && (
         <button onClick={() => takeRose()}>rose</button>
       )}
     </div>

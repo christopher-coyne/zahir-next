@@ -1,0 +1,22 @@
+.Container {
+  border: 1px solid blue;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.changeRoomButton {
+  background-color: rgb(218, 39, 39);
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: lato;
+  border-radius: 10px;
+  padding: 5px 10px;
+  transition: background-color 0.2s ease;
+  position: absolute;
+}
+
+.changeRoomButton:hover {
+  background-color: rgb(153, 26, 26);
+}
