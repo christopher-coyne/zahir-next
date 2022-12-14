@@ -3,6 +3,7 @@ import { PlayerContext } from "components/Games/Player";
 import { roomsInfo } from "../roomsInfo";
 import { RoomsContext } from "components/Games/Rooms";
 import { Room } from "interfaces/Room";
+import styles from "./GardenRoom.module.css";
 export function GardenRoom() {
   const { inventory, setInventory, roomHistory, currentRoom, setCurrentRoom } =
     useContext(PlayerContext);
@@ -29,10 +30,14 @@ export function GardenRoom() {
 
   console.log("room info : ", room);
   return (
-    <div>
+    <div className={styles.Container}>
       <h3>Go To Rooms:</h3>
       {room.adjacent.map((adjacent) => (
-        <button key={adjacent.name} onClick={() => changeRoom(adjacent.name)}>
+        <button
+          key={adjacent.name}
+          onClick={() => changeRoom(adjacent.name)}
+          className={styles.changeRoomButton}
+        >
           Go To {adjacent.name}
         </button>
       ))}
