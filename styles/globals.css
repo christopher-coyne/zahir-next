@@ -45,6 +45,11 @@ h2 {
   font-family: lato;
 }
 
+button {
+  cursor: pointer;
+  border: none;
+}
+
 .body {
   font-size: 18px;
   font-family: poppins;
