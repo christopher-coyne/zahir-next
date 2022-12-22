@@ -31,7 +31,7 @@ export const roomsInfo: roomsInfoType = {
       blurb: `How vainly men themselves amaze
     To win the palm, the oak, or bays,
     And their uncessant labours see
-    Crown’d from some single herb or tree,`,
+    Crowned from some single herb or tree,`,
     },
     items: [{ name: "rose", x: 20, y: 10 }],
     adjacent: [
@@ -43,8 +43,8 @@ export const roomsInfo: roomsInfoType = {
   },
   b: {
     poem: {
-      blurb: `Here at the fountain’s sliding foot,
-      Or at some fruit tree’s mossy root,
+      blurb: `Here at the bridge's splitting foot,
+      Or at some fruit tree’s twisting root,
       Casting the body’s vest aside,
       My soul into the boughs does glide;`,
     },
@@ -69,10 +69,10 @@ export const roomsInfo: roomsInfoType = {
   },
   d: {
     poem: {
-      blurb: `Meanwhile the mind, from pleasure less,
+      blurb: `Meanwhile a mind, from pleasure less,
       Withdraws into its happiness;
-      The mind, that ocean where each kind
-      Does straight its own resemblance find,`,
+      A mind, that ocean where each kind
+      Does straight its own iteration find,`,
     },
     items: [{ name: "rose", x: 20, y: 10 }],
     adjacent: [
@@ -96,7 +96,7 @@ export const roomsInfo: roomsInfoType = {
       blurb: `The nectarine and curious peach
       Into my hands themselves do reach;
       Stumbling on melons as I pass,
-      Ensnar’d with flow’rs, I fall on grass.`,
+      Ensnared with flowers, I fall on grass.`,
     },
     items: [{ name: "rose", x: 20, y: 10 }],
     adjacent: [{ name: "g", x: 80, y: 80, direction: 230 }],
@@ -106,7 +106,7 @@ export const roomsInfo: roomsInfoType = {
       blurb: `The nectarine and curious peach
       Into my hands themselves do reach;
       Stumbling on melons as I pass,
-      Ensnar’d with flow’rs, I fall on grass.`,
+      Ensnared with flowers, I fall on grass.`,
     },
     items: [],
     adjacent: [
@@ -117,10 +117,10 @@ export const roomsInfo: roomsInfoType = {
   },
   h: {
     poem: {
-      blurb: `Your sacred plants, if here below,
+      blurb: `Its sacred trees, if here below,
       Only among the plants will grow.
-      Society is all but rude,
-      To this delicious solitude.`,
+      Society is all but crude,
+      With this ephemral solitude.`,
     },
     items: [],
     adjacent: [{ name: "g", x: 85, y: 85, direction: 150 }],
@@ -129,7 +129,7 @@ export const roomsInfo: roomsInfoType = {
     poem: {
       blurb: `Little, alas, they know or heed
       How far these beauties hers exceed!
-      Fair trees! wheres’e’er your barks I wound,
+      Fair trees! where so ever your barks I wound,
       No name shall but your own be found.
       `,
     },
@@ -138,10 +138,10 @@ export const roomsInfo: roomsInfoType = {
   },
   j: {
     poem: {
-      blurb: `Such was that happy garden-state,
-      While man there walk’d without a mate;
-      After a place so pure and sweet,
-      What other help could yet be meet!
+      blurb: `Such was that garden-state,
+      While man there walked without a mate;
+      After a place so rough and sweet,
+      What other mind could yet be meet.
       `,
     },
     items: [],
@@ -153,10 +153,10 @@ export const roomsInfo: roomsInfoType = {
   },
   k: {
     poem: {
-      blurb: `But ’twas beyond a mortal’s share
+      blurb: `But it was beyond a mortal's share
       To wander solitary there:
-      Two paradises ’twere in one
-      To live in paradise alone.
+      A paradise, contained in one,
+      unfolds in two, becomes undone
       `,
     },
     items: [{ name: "j", x: 20, y: 10 }],
