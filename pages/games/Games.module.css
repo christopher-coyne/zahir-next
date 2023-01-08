@@ -1,9 +1,14 @@
 .gameContainer {
-  width: 70%;
-  height: 76vh;
+  width: 77%;
+  height: 40vw;
   border: 3px solid red;
   margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.backContainer {
+  width: 77%;
+  margin: auto;
 }
