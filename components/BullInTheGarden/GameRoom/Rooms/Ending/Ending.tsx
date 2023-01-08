@@ -1,8 +1,22 @@
 import { Props } from "./constants";
+import { useContext } from "react";
+import { PlayerContext } from "components/Games/Player";
+import { RoomsContext } from "components/Games/Rooms";
+import { initialRooms } from "components/BullInTheGarden/initalRooms";
 import Image from "next/image";
 import styles from "./Ending.module.css";
 
 export function Ending({ endType }: Props) {
+  const { inventory, setCurrentRoom, setInventory, setRoomHistory } =
+    useContext(PlayerContext);
+  const { setRooms } = useContext(RoomsContext);
+
+  const restart = () => {
+    setRoomHistory([]);
+    setInventory([]);
+    setCurrentRoom("");
+    setRooms(initialRooms);
+  };
   return (
     <div className={styles.container}>
       <h2>
@@ -28,7 +42,13 @@ Be reckon’d but with herbs and flow’rs! `}
             ? "To avoid the bull, do not recross paths more than twice."
             : `You have found all 3 flowers. To find the bull, double-cross paths 3 times. `}
         </h3>
-        <button className={`btn btn--dark ${styles.button}`}> Replay</button>
+        <button
+          className={`btn btn--dark ${styles.button}`}
+          onClick={() => restart()}
+        >
+          {" "}
+          Replay
+        </button>
       </div>
     </div>
   );
