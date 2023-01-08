@@ -1,8 +1,24 @@
-.Container {
+.container {
+  height: 100%;
+}
+
+.roomContainer {
   border: 1px solid blue;
   height: 100%;
   width: 100%;
   position: relative;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.01;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .changeRoomButton {
@@ -11,12 +27,75 @@
   font-size: 20px;
   font-weight: 700;
   font-family: lato;
-  border-radius: 10px;
-  padding: 5px 10px;
-  transition: background-color 0.2s ease;
+  border-radius: 5px;
+  padding: 3px 8px;
   position: absolute;
+  z-index: 2;
+
+  animation-name: fadeIn;
+  animation-duration: 4s;
 }
 
 .changeRoomButton:hover {
   background-color: rgb(153, 26, 26);
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.99;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.overlay {
+  opacity: 0;
+  position: absolute;
+  background-color: white;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+
+  animation-name: fadeOut;
+  animation-duration: 2s;
+}
+
+.poem {
+  position: aboslute;
+  top: 0px;
+  left: 0px;
+  padding: 0.5rem;
+  font-size: 20px;
+}
+
+.panelContainer {
+  display: flex;
+}
+
+.takeRose {
+  width: 100%;
+  font-size: 16px;
+  background-color: black;
+  color: white;
+}
+
+.flowerContainer {
+  position: absolute;
+  z-index: 2;
+  width: 10vw;
+  height: 15vw;
+  display: flex;
+  flex-direction: column;
+
+  animation-name: fadeIn;
+  animation-duration: 4s;
+}
+
+.flowerContainer:hover {
+  border: 2px solid black;
+  cursor: pointer;
 }
