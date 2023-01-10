@@ -4,9 +4,10 @@ import { GardenRoom } from "./Rooms/GardenRoom/GardenRoom";
 import { Start } from "./Rooms/Start/Start";
 import { RoomsContext } from "components/Games/Rooms";
 import { isEnd } from "./helpers";
-import { Loss } from "./Rooms/Loss/Loss";
-import { Win } from "./Rooms/Win/Win";
-export function GameRoom() {
+import { Ending } from "./Rooms/Ending/Ending";
+import { Props } from "./constants";
+
+export function GameRoom({ setFullscreen }: Props) {
   const { inventory, roomHistory, currentRoom, setCurrentRoom } =
     useContext(PlayerContext);
 
@@ -18,13 +19,13 @@ export function GameRoom() {
   const hasLost = isEnd(roomHistory);
 
   if (inventory.length === 3) {
-    return <Win />;
+    return <Ending endType="win" setFullscreen={setFullscreen} />;
   }
   if (hasLost) {
-    return <Loss />;
+    return <Ending endType="loss" setFullscreen={setFullscreen} />;
   }
   if (currentRoom === "") {
     return <Start />;
   }
-  return <GardenRoom />;
+  return <GardenRoom setFullscreen={setFullscreen} />;
 }
