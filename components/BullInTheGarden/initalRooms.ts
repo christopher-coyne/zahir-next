@@ -9,7 +9,7 @@ export const initialRooms: Room[] = [
   { name: "f", items: [{ name: "rose", history: [] }] },
   { name: "g", items: [] },
   { name: "h", items: [] },
-  { name: "i", items: [] },
+  { name: "i", items: [{ name: "rose", history: [] }] },
   { name: "j", items: [] },
-  { name: "k", items: [{ name: "rose", history: [] }] },
+  { name: "k", items: [] },
 ];
