@@ -1,16 +1,24 @@
 .project {
   display: flex;
+  height: 290px;
 }
 
 .project__description {
   flex-grow: 1;
   flex-shrink: 1;
-  border: 1px solid blue;
   text-align: center;
+  padding: 0px 50px;
+}
+
+.project__imgContainer {
+  flex-basis: 60%;
+  flex-shrink: 1;
+  flex-grow: 1;
+  position: relative;
 }
 
 .project__img {
-  border: 1px solid red;
+  border: 1px solid black;
 }
 
 .project__title {
@@ -19,8 +27,33 @@
 }
 
 .buttonContainer {
-  margin-top: 40px;
+  margin-top: 2vw;
   display: flex;
   gap: 10px;
   justify-content: center;
+}
+
+@media screen and (max-width: 1000px) {
+  .project {
+    height: 30vw;
+  }
+  .project__title {
+    font-size: 20px;
+  }
+  .project__description {
+    padding: 0px 20px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .project {
+    flex-direction: column;
+    height: 80vw;
+  }
+  .project__imgContainer {
+    flex-basis: 50%;
+    flex-shrink: 1;
+    flex-grow: 1;
+    position: relative;
+  }
 }
