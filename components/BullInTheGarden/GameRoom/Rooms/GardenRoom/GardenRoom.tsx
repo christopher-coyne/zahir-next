@@ -10,7 +10,9 @@ import styles from "./GardenRoom.module.css";
 import { previousCrosses } from "../../helpers";
 import { ControlPanel } from "components/BullInTheGarden/ControlPanel";
 import BullEncounter from "../BullEncounter/BullEncounter";
-export function GardenRoom() {
+import { Props } from "./constants";
+
+export function GardenRoom({ setFullscreen }: Props) {
   const { inventory, setInventory, roomHistory, currentRoom, setCurrentRoom } =
     useContext(PlayerContext);
   const [prevCrosses, setPrevCrosses] = useState(0);
@@ -19,6 +21,16 @@ export function GardenRoom() {
   const room = roomsInfo[currentRoom];
 
   console.log("currentRoomInfo ", currentRoomInfo);
+
+  /*
+  const play = () => {
+    const test = new Audio("./bull-1.wav");
+    // test.play();
+    console.log("test ", test);
+  };
+
+  play();
+  */
 
   const changeRoom = (roomName: string) => {
     console.log("previous crosses ", previousCrosses(roomHistory, roomName));
@@ -31,7 +43,7 @@ export function GardenRoom() {
           setCurrentRoom(roomName);
           setPrevCrosses(0);
         },
-        prevCrosses === 3 ? 5000 : prevCrosses * 1000
+        prevCrosses === 3 ? 9000 : prevCrosses * 1500
       );
     } else {
       setCurrentRoom(roomName);
@@ -53,7 +65,9 @@ export function GardenRoom() {
 
   if (prevCrosses) {
     console.log("PREV CROSSES ", prevCrosses);
-    return <BullEncounter iterations={prevCrosses} />;
+    return (
+      <BullEncounter iterations={prevCrosses} setFullscreen={setFullscreen} />
+    );
   }
   return (
     <div className={styles.container}>
