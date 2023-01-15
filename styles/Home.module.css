@@ -4,12 +4,6 @@
   margin: auto;
 }
 
-@media screen and (max-width: 1000px) {
-  .main {
-    border: 1px solid red;
-  }
-}
-
 .hero {
   height: 95vh;
   display: flex;
@@ -60,4 +54,10 @@
   background-color: black;
   height: 4px;
   flex-grow: 1;
+}
+
+@media screen and (max-width: 1000px) {
+  .main {
+    border: 1px solid red;
+  }
 }
