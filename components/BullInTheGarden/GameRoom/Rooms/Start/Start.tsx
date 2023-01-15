@@ -18,6 +18,7 @@ export function Start() {
         width={300}
         height={300}
       />
+      <h4>Turn on sound for best experience</h4>
       <button
         className={`btn btn--dark ${styles.startButton}`}
         onClick={() => startGame()}
