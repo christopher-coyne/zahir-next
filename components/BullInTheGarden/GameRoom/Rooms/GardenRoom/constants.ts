@@ -4,3 +4,7 @@ export const roomAndAdjacentToDirection = (
 ) => {
   return null;
 };
+
+export type Props = {
+  setFullscreen: React.Dispatch<React.SetStateAction<boolean>>;
+};
