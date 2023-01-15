@@ -1,6 +1,5 @@
 // table to lookup important information about different bitg rooms
 type ItemType = {
-  name: string;
   x: number;
   y: number;
 };
@@ -33,7 +32,7 @@ export const roomsInfo: roomsInfoType = {
     And their uncessant labours see
     Crowned from some single herb or tree,`,
     },
-    items: [{ name: "rose", x: 20, y: 10 }],
+    items: [{ x: 20, y: 10 }],
     adjacent: [
       { name: "b", x: 65, y: 0, direction: 320 },
       { name: "d", x: 55, y: 5, direction: 330 },
@@ -72,9 +71,9 @@ export const roomsInfo: roomsInfoType = {
       blurb: `Meanwhile a mind, from pleasure less,
       Withdraws into its happiness;
       A mind, that ocean where each kind
-      Does straight its own iteration find,`,
+      Does straight its own imitation find,`,
     },
-    items: [{ name: "rose", x: 20, y: 10 }],
+    items: [{ x: 55, y: 3 }],
     adjacent: [
       { name: "e", x: 70, y: 60, direction: 0 },
       { name: "c", x: 90, y: 10, direction: 250 },
@@ -94,19 +93,19 @@ export const roomsInfo: roomsInfoType = {
   f: {
     poem: {
       blurb: `The nectarine and curious peach
-      Into my hands themselves do reach;
+      Over my hands themselves do reach;
       Stumbling on melons as I pass,
       Ensnared with flowers, I fall on grass.`,
     },
-    items: [{ name: "rose", x: 20, y: 10 }],
-    adjacent: [{ name: "g", x: 80, y: 80, direction: 230 }],
+    items: [{ x: 60, y: 85 }],
+    adjacent: [{ name: "g", x: 85, y: 75, direction: 230 }],
   },
   g: {
     poem: {
-      blurb: `The nectarine and curious peach
-      Into my hands themselves do reach;
-      Stumbling on melons as I pass,
-      Ensnared with flowers, I fall on grass.`,
+      blurb: `What curious life in this I lead.
+      Ripe apples hang above my head;
+      The luscious clusters of the vine
+      Await to ripen and crushed to wine.`,
     },
     items: [],
     adjacent: [
@@ -133,7 +132,7 @@ export const roomsInfo: roomsInfoType = {
       No name shall but your own be found.
       `,
     },
-    items: [],
+    items: [{ x: 55, y: 7 }],
     adjacent: [{ name: "j", x: 90, y: 50, direction: 160 }],
   },
   j: {
@@ -156,10 +155,10 @@ export const roomsInfo: roomsInfoType = {
       blurb: `But it was beyond a mortal's share
       To wander solitary there:
       A paradise, contained in one,
-      unfolds in two, becomes undone
+      did it stay?
       `,
     },
-    items: [{ name: "j", x: 20, y: 10 }],
+    items: [],
     adjacent: [{ name: "j", x: 80, y: 10, direction: 260 }],
   },
 };
