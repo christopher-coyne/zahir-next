@@ -29,6 +29,7 @@ export default function Home() {
                 className="logo"
                 width={300}
                 height={200}
+                priority
               />
             </div>
             <div className={styles.titleContainer}>
