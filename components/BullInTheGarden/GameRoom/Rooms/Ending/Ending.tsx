@@ -7,7 +7,7 @@ import Image from "next/image";
 import styles from "./Ending.module.css";
 
 export function Ending({ endType }: Props) {
-  const { inventory, setCurrentRoom, setInventory, setRoomHistory } =
+  const { setCurrentRoom, setInventory, setRoomHistory } =
     useContext(PlayerContext);
   const { setRooms } = useContext(RoomsContext);
 

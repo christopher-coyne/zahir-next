@@ -1,7 +1,4 @@
-import Image from "next/image";
-import { useContext } from "react";
-import styles from "./Game.module.css";
-import { Player, PlayerContext } from "./Player";
+import { Player } from "./Player";
 import { Rooms } from "./Rooms";
 import { RoomsProps } from "./constants";
 

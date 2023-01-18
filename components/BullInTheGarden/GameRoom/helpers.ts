@@ -3,8 +3,6 @@ export const isEnd = (history: string[]) => {
   const seenEdges: { [key: string]: number } = {};
   const rooms = history.slice(1);
 
-  console.log("rooms check... ", rooms);
-
   // numbe of times you have crossed the same path
   let crossTally = 0;
   for (let x = 0; x < rooms.length - 1; x++) {
@@ -12,17 +10,9 @@ export const isEnd = (history: string[]) => {
     edge.sort();
     const strEdge = edge.join("");
     if (seenEdges[strEdge]) {
-      // loss
-      /*
-      if (seenEdges[strEdge] == 2) {
-        return true;
-      }
-      */
       crossTally += 1;
     } else seenEdges[strEdge] = 1;
   }
-
-  console.log("cross tally : ", crossTally);
   if (crossTally >= 3) {
     return true;
   }
@@ -35,8 +25,6 @@ export const previousCrosses = (history: string[], nextRoom: string) => {
   const seenEdges: { [key: string]: number } = {};
   const rooms = history.slice(1);
 
-  console.log("rooms check... ", rooms);
-
   // numbe of times you have crossed the same path
   let crossTally = 0;
   for (let x = 0; x < rooms.length - 1; x++) {
@@ -44,13 +32,6 @@ export const previousCrosses = (history: string[], nextRoom: string) => {
     edge.sort();
     const strEdge = edge.join("");
     if (seenEdges[strEdge]) {
-      // loss
-      /*
-      if (seenEdges[strEdge] == 2) {
-        return true;
-      }
-      */
-      // crossTally += 1;
       crossTally += 1;
     } else seenEdges[strEdge] = 1;
   }

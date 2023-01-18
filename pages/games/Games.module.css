@@ -1,7 +1,6 @@
 .gameContainer {
   width: 77%;
   height: 40vw;
-  border: 3px solid red;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -14,11 +13,11 @@
   position: absolute;
   top: 0;
   left: 0;
-  border: 3px solid red;
   background-color: white;
 }
 
 .backContainer {
   width: 77%;
   margin: auto;
+  padding: 5px 0px;
 }

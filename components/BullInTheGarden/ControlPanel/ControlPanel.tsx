@@ -1,4 +1,3 @@
-import { Game } from "components/Games";
 import { useContext } from "react";
 import styles from "./ControlPanel.module.css";
 import { PlayerContext } from "components/Games/Player";

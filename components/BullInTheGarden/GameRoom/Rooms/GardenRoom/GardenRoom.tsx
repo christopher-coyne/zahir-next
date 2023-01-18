@@ -13,29 +13,17 @@ import BullEncounter from "../BullEncounter/BullEncounter";
 import { Props } from "./constants";
 
 export function GardenRoom({ setFullscreen }: Props) {
-  const { inventory, setInventory, roomHistory, currentRoom, setCurrentRoom } =
+  const { setInventory, roomHistory, currentRoom, setCurrentRoom } =
     useContext(PlayerContext);
   const [prevCrosses, setPrevCrosses] = useState(0);
   const { rooms, removeItem } = useContext(RoomsContext);
   const currentRoomInfo = rooms.find((room: Room) => room.name === currentRoom);
-  const room = roomsInfo[currentRoom];
 
-  console.log("currentRoomInfo ", currentRoomInfo);
-
-  /*
-  const play = () => {
-    const test = new Audio("./bull-1.wav");
-    // test.play();
-    console.log("test ", test);
-  };
-
-  play();
-  */
+  const roomLayout = roomsInfo[currentRoom];
 
   const changeRoom = (roomName: string) => {
-    console.log("previous crosses ", previousCrosses(roomHistory, roomName));
     const prevCrosses = previousCrosses(roomHistory, roomName);
-    console.log("");
+    // if crossing over previous, mark flag to trigger bull encounter
     if (prevCrosses) {
       setPrevCrosses(prevCrosses);
       setTimeout(
@@ -56,15 +44,12 @@ export function GardenRoom({ setFullscreen }: Props) {
     removeItem(currentRoom);
   };
 
-  console.log("room info : ", room);
-
   const backgroundImage = `url(\"/bull-in-the-garden/rooms/node-${
     currentRoomInfo!.name
   }.png\")`;
-  console.log("new background igm ", backgroundImage);
 
+  // if a prevCross is detected, return a bull encounter with the number of crosses
   if (prevCrosses) {
-    console.log("PREV CROSSES ", prevCrosses);
     return (
       <BullEncounter iterations={prevCrosses} setFullscreen={setFullscreen} />
     );
@@ -72,7 +57,7 @@ export function GardenRoom({ setFullscreen }: Props) {
   return (
     <div className={styles.container}>
       <div className={styles.panelContainer}>
-        <p className={styles.poem}>{room.poem.blurb}</p>
+        <p className={styles.poem}>{roomLayout.poem.blurb}</p>
         <ControlPanel />
       </div>
       <div
@@ -80,7 +65,7 @@ export function GardenRoom({ setFullscreen }: Props) {
         style={{ backgroundImage: backgroundImage, backgroundSize: "cover" }}
       >
         <div className={`${styles.overlay}`} key={currentRoomInfo?.name} />
-        {room.adjacent.map((adjacent) => (
+        {roomLayout.adjacent.map((adjacent) => (
           <button
             key={adjacent.name}
             onClick={() => changeRoom(adjacent.name)}
@@ -101,8 +86,8 @@ export function GardenRoom({ setFullscreen }: Props) {
             className={styles.flowerContainer}
             style={{
               position: "absolute",
-              top: `${room.items[0].x}%`,
-              left: `${room.items[0].y}%`,
+              top: `${roomLayout.items[0].x}%`,
+              left: `${roomLayout.items[0].y}%`,
             }}
             onClick={() => takeRose()}
           >

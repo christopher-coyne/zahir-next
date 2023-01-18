@@ -1,7 +1,5 @@
 import styles from "./TraditionalArt.module.css";
 import Image from "next/image";
-import Link from "next/link";
-import { TypeFlags } from "typescript";
 export const TraditionalArt = () => {
   const thumbnails = [
     {

@@ -17,6 +17,7 @@ export function Start() {
         className={styles.project__img}
         width={300}
         height={300}
+        priority
       />
       <h4>Turn on sound for best experience</h4>
       <button

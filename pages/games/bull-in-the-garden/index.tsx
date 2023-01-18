@@ -1,7 +1,5 @@
-import Head from "next/head";
-import Image from "next/image";
 import styles from "../Games.module.css";
-import { ControlPanel, GameRoom } from "components/BullInTheGarden";
+import { GameRoom } from "components/BullInTheGarden";
 import { Game } from "components/Games";
 import { Back } from "components/Layout/Back/Back";
 

@@ -1,7 +1,4 @@
 import React, { useState, Dispatch } from "react";
-import Image from "next/image";
-import { useContext } from "react";
-import styles from "./Game.module.css";
 import { Item } from "interfaces/Item";
 import { PlayerProps } from "./constants";
 

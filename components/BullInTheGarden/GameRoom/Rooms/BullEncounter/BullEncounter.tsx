@@ -8,15 +8,14 @@ export default function BullEncounter({ iterations, setFullscreen }: Props) {
   const backgroundUrl = `/bull-in-the-garden/bull/${background}`;
 
   const play = (file: string) => {
-    const test = new Audio(file);
-    test.play();
-    console.log("test ", test);
+    const bullAudio = new Audio(file);
+    bullAudio.volume = 0.5;
+    bullAudio.play();
   };
 
   useEffect(() => {
     if (background === "bull-distort1.png") {
       play("/bull-in-the-garden/audio/bull-3v2.wav");
-      console.log("set full screen");
       setFullscreen(true);
     }
     return () => {
@@ -40,11 +39,6 @@ export default function BullEncounter({ iterations, setFullscreen }: Props) {
     }
   }
 
-  /*
-  <audio autoPlay src="/bull-in-the-garden/audio/bull-1.wav" />
-  */
-
-  console.log("url ", backgroundUrl);
   return (
     <div className={styles.container}>
       {background === "bull-distort1.png" ? (
