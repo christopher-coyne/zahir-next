@@ -7,7 +7,11 @@ export function Navbar() {
     <nav className={styles.navbar}>
       <ul className={styles.navbar__list}>
         <li>
-          <a href="https://github.com/christopher-coyne/zahir-next">
+          <a
+            href="https://github.com/christopher-coyne/zahir-next"
+            target="_blank"
+            rel="noreferrer"
+          >
             <FontAwesomeIcon
               icon={faGithub}
               size="lg"
@@ -17,7 +21,11 @@ export function Navbar() {
           </a>
         </li>
         <li>
-          <a href="https://www.instagram.com/zahir_red/">
+          <a
+            href="https://www.instagram.com/zahir_red/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <FontAwesomeIcon
               icon={faInstagram}
               size="lg"
@@ -27,7 +35,12 @@ export function Navbar() {
           </a>
         </li>
         <li>
-          <a href="www.google.com" className="hover--light-blue">
+          <a
+            className="hover--light-blue"
+            href="mailto:christcoyne@gmail.com"
+            target="_blank"
+            rel="noreferrer"
+          >
             Contact
           </a>
         </li>

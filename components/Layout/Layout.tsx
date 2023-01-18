@@ -1,5 +1,3 @@
-import Image from "next/image";
-import styles from "./Layout.module.css";
 import { Navbar } from "./Navbar";
 
 type Props = {

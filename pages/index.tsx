@@ -49,7 +49,7 @@ export default function Home() {
             </a>
           </section>
           <section>
-            <section id="#multimedia">
+            <section id="multimedia">
               <Title text="Multimedia and Games" />
               <ul>
                 <MultiMedia />
