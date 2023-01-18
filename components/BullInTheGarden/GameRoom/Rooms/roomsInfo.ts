@@ -102,7 +102,7 @@ export const roomsInfo: roomsInfoType = {
   },
   g: {
     poem: {
-      blurb: `What curious life in this I lead.
+      blurb: `What uncertain life in this I lead.
       Ripe apples hang above my head;
       The luscious clusters of the vine
       Await to ripen and crushed to wine.`,
@@ -129,7 +129,7 @@ export const roomsInfo: roomsInfoType = {
       blurb: `Little, alas, they know or heed
       How far these beauties hers exceed!
       Fair trees! where so ever your barks I wound,
-      No name shall but your own be found.
+      All names with your own shall be found.
       `,
     },
     items: [{ x: 55, y: 7 }],
@@ -154,8 +154,7 @@ export const roomsInfo: roomsInfoType = {
     poem: {
       blurb: `But it was beyond a mortal's share
       To wander solitary there:
-      A paradise, contained in one,
-      did it stay?
+      A paradise, contained in one...
       `,
     },
     items: [],

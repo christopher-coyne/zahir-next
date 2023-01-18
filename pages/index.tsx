@@ -1,10 +1,7 @@
-import { loadGetInitialProps } from "next/dist/shared/lib/utils";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import Head from "next/head";
 import Image from "next/image";
-import Link from "next/link";
-import { Navbar } from "../components/Layout/Navbar";
 import styles from "/styles/Home.module.css";
 import { TraditionalArt } from "components/Home/TraditionalArt/TraditionalArt";
 import { MultiMedia } from "components/Home/MutliMedia/MultiMedia";

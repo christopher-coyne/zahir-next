@@ -24,21 +24,26 @@ export const TraditionalArt = () => {
   return (
     <div className={styles.gridContainer}>
       {thumbnails.map((thumbnail) => (
-        <div className={styles.thumbnailContainer} key={thumbnail.title}>
-          <div className={styles.imgContainer}>
-            <a href={thumbnail.link} target="_blank" rel="noreferrer">
+        <a
+          href={thumbnail.link}
+          target="_blank"
+          rel="noreferrer"
+          key={thumbnail.title}
+        >
+          <div className={styles.thumbnailContainer}>
+            <div className={styles.imgContainer}>
               <Image
                 src={`/thumbnails/${thumbnail.title}.png`}
                 alt={thumbnail.title}
                 fill
                 className={styles.img}
               />
-            </a>
+            </div>
+            <div className={styles.titleContainer}>
+              <h4 className={styles.title}>{thumbnail.title}</h4>
+            </div>
           </div>
-          <div className={styles.titleContainer}>
-            <h4 className={styles.title}>{thumbnail.title}</h4>
-          </div>
-        </div>
+        </a>
       ))}
     </div>
   );
