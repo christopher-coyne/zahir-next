@@ -55,9 +55,3 @@
   height: 4px;
   flex-grow: 1;
 }
-
-@media screen and (max-width: 1000px) {
-  .main {
-    border: 1px solid red;
-  }
-}
